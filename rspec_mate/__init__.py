@@ -278,7 +278,7 @@ class RspecWindowHelper:
         uri = get_file_path(self.get_filebrowser_root())
         spec_path = get_root_path(uri)
         spec_dir = get_spec_dir(uri)
-        os.system("cd %s && spec %s -f h:%s 2>&1 | tee %s" % (spec_dir, spec_path, TMP_FILE, OUT_FILE))
+        os.system("cd %s && spec %s 2>&1 | tee %s" % (spec_dir, spec_path, OUT_FILE))
 
         if self.rspec_window:
             self.rspec_window.resize(700,510)
